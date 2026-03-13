@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Softlife Solutions — Live The Soft Life</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital@0;1&family=Nunito+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a
+      href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+      class="fwa"
+      target="_blank"
+      aria-label="WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="white">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+    <!-- MOB OVERLAY -->
+    <div class="mob-overlay" id="mobOverlay">
+      <button class="mob-x" onclick="closeMob()">✕</button>
+      <a href="#services" onclick="closeMob()">Services</a>
+      <a href="#how" onclick="closeMob()">Process</a>
+      <a href="#why" onclick="closeMob()">About</a>
+      <a href="#gallery" onclick="closeMob()">Gallery</a>
+      <a href="#reviews" onclick="closeMob()">Reviews</a>
+      <a
+        href="https://wa.me/2349000000000"
+        target="_blank"
+        class="mob-book"
+        onclick="closeMob()"
+        >Book Now</a
+      >
+    </div>
+
+    <!-- NAV -->
+    <nav id="mainNav">
+      <div class="nav-inner">
+        <img class="softlife" src="./Softlife Lime+White.png" alt="Softlife" />
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">Process</a></li>
+          <li><a href="#why">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <a
+          href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+          class="nav-btn"
+          target="_blank"
+          >Book Now</a
+        >
+        <div class="ham" onclick="openMob()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <span class="hero-eyebrow">Nigeria's first Home Services</span>
+        <p class="hero-pre">Your home deserves to</p>
+        <div class="rotator" id="rotator">
+          <div class="rotator-item active"><b>Live</b>&nbsp;The Soft Life</div>
+          <div class="rotator-item"><b>Enjoy</b>&nbsp;The Comfort</div>
+          <div class="rotator-item"><b>Experience</b>&nbsp;The Ease</div>
+        </div>
+        <p class="hero-body">
+          We handle cleaning, AC servicing, fumigation, painting, and more — so
+          you can focus on living well. Professional. Reliable. On time.
+        </p>
+        <div class="hero-ctas">
+          <a
+            href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+            class="btn-rose"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Book on WhatsApp
+          </a>
+          <a href="#services" class="btn-ghost">See our services →</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stn">500+</div>
+            <div class="stl">Jobs Done</div>
+          </div>
+          <div>
+            <div class="stn">4.9★</div>
+            <div class="stl">Rating</div>
+          </div>
+          <div>
+            <div class="stn">98%</div>
+            <div class="stl">Satisfied</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img
+          src="./photo_2026-01-06_15-26-05.jpg"
+          alt="Professional home service"
+        />
+        <div class="hchip c1">
+          <div class="hc-lbl">Latest Booking</div>
+          <div class="hc-val">Deep Clean · Lagos</div>
+        </div>
+        <div class="hchip c2">
+          <div class="hc-lbl">Average Rating</div>
+          <div class="hc-val">4.9 / 5.0</div>
+          <div class="hc-stars">★ ★ ★ ★ ★</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+      <div class="ticker-inner">
+        <span class="tick">Deep Cleaning</span
+        ><span class="tick">AC Servicing</span
+        ><span class="tick">Fumigation</span
+        ><span class="tick">Interior Painting</span
+        ><span class="tick">Security Installs</span
+        ><span class="tick">Plumbing</span
+        ><span class="tick">Electrical Works</span
+        ><span class="tick">Post-Construction Clean</span>
+        <span class="tick">Deep Cleaning</span
+        ><span class="tick">AC Servicing</span
+        ><span class="tick">Fumigation</span
+        ><span class="tick">Interior Painting</span
+        ><span class="tick">Security Installs</span
+        ><span class="tick">Plumbing</span
+        ><span class="tick">Electrical Works</span
+        ><span class="tick">Post-Construction Clean</span>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="svc-head">
+        <div>
+          <p class="tag rv">Our Services</p>
+          <h2 class="stitle rv d1">
+            Everything your home<br />needs, <em>handled.</em>
+          </h2>
+        </div>
+        <p class="bodytxt rv d2">
+          Vetted professionals, fair pricing, guaranteed results. Book any
+          service instantly on WhatsApp.
+        </p>
+      </div>
+      <div class="svc-grid">
+        <a
+          class="scard rv"
+          href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+          target="_blank"
+        >
+          <div class="scard-img">
+            <img src="./" alt="Deep Cleaning" />
+            <div class="scard-img-overlay"></div>
+            <span class="scard-no-badge">Most Popular</span>
+          </div>
+          <div class="scard-body">
+            <span class="scard-em">🧹</span>
+            <div class="scard-name">Deep Cleaning</div>
+            <p class="scard-desc">
+              Full home, office or post-construction cleaning. Every corner,
+              spotless.
+            </p>
+            <span class="scard-link">Book Now →</span>
+          </div>
+        </a>
+
+        <a
+          class="scard rv d1"
+          href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+          target="_blank"
+        >
+          <div class="scard-img">
+            <img src="" alt="AC Servicing" />
+            <div class="scard-img-overlay"></div>
+          </div>
+          <div class="scard-body">
+            <span class="scard-em">❄️</span>
+            <div class="scard-name">AC Servicing</div>
+            <p class="scard-desc">
+              Installation, maintenance, and repair. Stay cool and comfortable
+              all year.
+            </p>
+            <span class="scard-link">Book Now →</span>
+          </div>
+        </a>
+
+        <a
+          class="scard rv d2"
+          href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+          target="_blank"
+        >
+          <div class="scard-img">
+            <img
+              src=""
+              alt="Fumigation"
+            />
+            <div class="scard-img-overlay"></div>
+          </div>
+          <div class="scard-body">
+            <span class="scard-em">🛡️</span>
+            <div class="scard-name">Fumigation</div>
+            <p class="scard-desc">
+              Safe, effective pest control for home or office. Family and pet
+              friendly.
+            </p>
+            <span class="scard-link">Book Now →</span>
+          </div>
+        </a>
+
+        <a
+          class="scard rv"
+          href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+          target="_blank"
+        >
+          <div class="scard-img">
+            <img
+              src=""
+              alt="Painting"
+            />
+            <div class="scard-img-overlay"></div>
+          </div>
+          <div class="scard-body">
+            <span class="scard-em">🎨</span>
+            <div class="scard-name">Painting</div>
+            <p class="scard-desc">
+              Interior and exterior painting with premium finishes. Any space
+              transformed.
+            </p>
+            <span class="scard-link">Book Now →</span>
+          </div>
+        </a>
+
+        <a
+          class="scard rv d1"
+          href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+          target="_blank"
+        >
+          <div class="scard-img">
+            <img
+              src=""
+              alt="Security"
+            />
+            <div class="scard-img-overlay"></div>
+          </div>
+          <div class="scard-body">
+            <span class="scard-em">📷</span>
+            <div class="scard-name">Security</div>
+            <p class="scard-desc">
+              CCTV, smart locks, and alarm systems professionally installed and
+              set up.
+            </p>
+            <span class="scard-link">Book Now →</span>
+          </div>
+        </a>
+
+        <a
+          class="scard rv d2"
+          href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+          target="_blank"
+        >
+          <div class="scard-img">
+            <img
+              src=""
+              alt="Plumbing"
+            />
+            <div class="scard-img-overlay"></div>
+          </div>
+          <div class="scard-body">
+            <span class="scard-em">🔧</span>
+            <div class="scard-name">Plumbing</div>
+            <p class="scard-desc">
+              Leaks, installs, repairs. Fixed fast and done right the first
+              time.
+            </p>
+            <span class="scard-link">Book Now →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how" id="how">
+      <p class="tag lt rv">The Process</p>
+      <h2 class="stitle lt rv d1">Simple as sending <em>a message.</em></h2>
+      <div class="how-grid">
+        <div class="hstep rv">
+          <span class="hstep-no">01</span>
+          <div class="hstep-title">Message Us</div>
+          <p class="hstep-body">
+            Send a WhatsApp. Tell us what you need, your location, and when
+            works for you.
+          </p>
+        </div>
+        <div class="hstep rv d1">
+          <span class="hstep-no">02</span>
+          <div class="hstep-title">Get a Quote</div>
+          <p class="hstep-body">
+            We send a clear, upfront quote — no hidden fees. You approve before
+            we start.
+          </p>
+        </div>
+        <div class="hstep rv d2">
+          <span class="hstep-no">03</span>
+          <div class="hstep-title">We Show Up</div>
+          <p class="hstep-body">
+            Vetted professionals arrive on time, fully equipped, ready to
+            deliver.
+          </p>
+        </div>
+        <div class="hstep rv d3">
+          <span class="hstep-no">04</span>
+          <div class="hstep-title">You Relax</div>
+          <p class="hstep-body">
+            Sit back and enjoy the results. That's the Softlife experience —
+            done.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why" id="why">
+      <div class="why-wrap">
+        <div class="why-imgs rv">
+          <div class="wi-a">
+            <img
+              src="./photo_1_2026-03-12_18-54-55.jpg"
+              alt="Professional team at work"
+            />
+          </div>
+          <div class="wi-b">
+            <img src="./photo_2026-01-06_15-25-18.jpg" alt="Cleaning service" />
+          </div>
+          <div class="why-badge">
+            <span class="wb-n">500+</span>
+            <div class="wb-l">Jobs Done</div>
+          </div>
+        </div>
+        <div>
+          <p class="tag rv">Why Choose Us</p>
+          <h2 class="stitle rv d1">
+            We don't just clean.<br /><em>We elevate.</em>
+          </h2>
+          <p class="bodytxt rv d2">
+            Every professional we send is vetted, trained, and committed to
+            making your home feel the way it should.
+          </p>
+          <div class="why-list">
+            <div class="wi-row rv d1">
+              <div class="wi-ico">🔒</div>
+              <div>
+                <div class="wi-ttl">Vetted Professionals Only</div>
+                <p class="wi-dsc">
+                  Background-checked and certified before they ever enter your
+                  home.
+                </p>
+              </div>
+            </div>
+            <div class="wi-row rv d2">
+              <div class="wi-ico">⚡</div>
+              <div>
+                <div class="wi-ttl">Same-Day Availability</div>
+                <p class="wi-dsc">
+                  Urgent? We respond fast and show up when you actually need us.
+                </p>
+              </div>
+            </div>
+            <div class="wi-row rv d3">
+              <div class="wi-ico">💯</div>
+              <div>
+                <div class="wi-ttl">Satisfaction Guaranteed</div>
+                <p class="wi-dsc">
+                  Not happy? We come back and fix it — no arguments, no extra
+                  charge.
+                </p>
+              </div>
+            </div>
+            <div class="wi-row rv d4">
+              <div class="wi-ico">💳</div>
+              <div>
+                <div class="wi-ttl">Transparent Pricing</div>
+                <p class="wi-dsc">
+                  What we quote is exactly what you pay. Always honest, always
+                  upfront.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <div class="gallery-head">
+        <p class="tag rv">Our Work</p>
+        <h2 class="stitle rv d1">
+          Results that <em>speak for themselves.</em>
+        </h2>
+      </div>
+      <div class="gal-grid">
+        <div class="gal-item tall rv">
+          <img
+            src=""
+            alt="Spotless kitchen after deep clean"
+          />
+          <div class="gal-overlay"></div>
+          <div class="gal-label">Deep Cleaning</div>
+        </div>
+
+        <div class="gal-item rv d1">
+          <img
+            src=""
+            alt="Beautiful living room"
+          />
+          <div class="gal-overlay"></div>
+          <div class="gal-label">After Service</div>
+        </div>
+
+        <div class="gal-item rv d2">
+          <img
+            src=""
+            alt="Freshly painted wall"
+          />
+          <div class="gal-overlay"></div>
+          <div class="gal-label">Interior Painting</div>
+        </div>
+
+        <div class="gal-item tall rv d1">
+          <img
+            src=""
+            alt="Clean bathroom"
+          />
+          <div class="gal-overlay"></div>
+          <div class="gal-label">Bathroom Cleaning</div>
+        </div>
+
+        <div class="gal-item wide rv">
+          <img
+            src=""
+            alt="Modern clean kitchen"
+          />
+          <div class="gal-overlay"></div>
+          <div class="gal-label">Kitchen Restoration</div>
+        </div>
+
+        <div class="gal-item rv d2">
+          <img
+            src=""
+            alt="AC unit serviced"
+          />
+          <div class="gal-overlay"></div>
+          <div class="gal-label">AC Installation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="rv-head">
+        <div>
+          <p class="tag lt rv">Reviews</p>
+          <h2 class="stitle lt rv d1">Hear it from <em>our customers.</em></h2>
+        </div>
+        <p class="bodytxt lt rv d2" style="max-width: 300px">
+          Hundreds of happy homes across Lagos. Real people, real results.
+        </p>
+      </div>
+      <div class="rv-grid">
+        <div class="rv-card rv">
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-quote">
+            "They showed up on time, cleaned every corner, and left the place
+            smelling incredible. I was blown away."
+          </p>
+          <div class="rv-who">
+            <div class="rv-av">A</div>
+            <div>
+              <div class="rv-name">Adaeze O.</div>
+              <div class="rv-role">Homeowner · Lekki</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-card rv d1">
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-quote">
+            "The AC team was fast, professional, explained everything. Best
+            service I've had in Lagos."
+          </p>
+          <div class="rv-who">
+            <div class="rv-av">K</div>
+            <div>
+              <div class="rv-name">Kola B.</div>
+              <div class="rv-role">Tenant · Victoria Island</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-card rv d2">
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-quote">
+            "Fumigation done safely, completely fine for my kids. Pricing was
+            honest and fair. Five stars!"
+          </p>
+          <div class="rv-who">
+            <div class="rv-av">T</div>
+            <div>
+              <div class="rv-name">Titilayo M.</div>
+              <div class="rv-role">Mother of 2 · Ikoyi</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-card rv">
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-quote">
+            "House repainted perfectly. They cleaned up after themselves. Zero
+            stress, amazing results."
+          </p>
+          <div class="rv-who">
+            <div class="rv-av">E</div>
+            <div>
+              <div class="rv-name">Emeka J.</div>
+              <div class="rv-role">Property Owner · Ajah</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-card rv d1">
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-quote">
+            "CCTV installed perfectly, walked me through the app. Very
+            professional — feeling much safer now."
+          </p>
+          <div class="rv-who">
+            <div class="rv-av">F</div>
+            <div>
+              <div class="rv-name">Fatima Y.</div>
+              <div class="rv-role">Business Owner · Surulere</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-card rv d2">
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-quote">
+            "WhatsApp booking, quote in minutes, team at my door next morning.
+            Exactly what Lagos needed."
+          </p>
+          <div class="rv-who">
+            <div class="rv-av">D</div>
+            <div>
+              <div class="rv-name">Dapo R.</div>
+              <div class="rv-role">Entrepreneur · Yaba</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-bar rv">
+        <div class="sb-i">
+          <span class="sb-n">500+</span>
+          <div class="sb-l">Jobs Done</div>
+        </div>
+        <div class="sb-i">
+          <span class="sb-n">4.9★</span>
+          <div class="sb-l">Avg Rating</div>
+        </div>
+        <div class="sb-i">
+          <span class="sb-n">6+</span>
+          <div class="sb-l">Services</div>
+        </div>
+        <div class="sb-i">
+          <span class="sb-n">98%</span>
+          <div class="sb-l">Satisfied</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-wrap">
+      <div class="cta-box rv">
+        <div style="position: relative; z-index: 1">
+          <p class="cta-pre">Ready to book?</p>
+          <h2 class="cta-ttl">
+            Stop stressing.<br /><em>Start living soft.</em>
+          </h2>
+          <p class="cta-sub">
+            One WhatsApp message is all it takes. Join hundreds of happy Lagos
+            homes today.
+          </p>
+        </div>
+        <div class="cta-btns">
+          <a
+            href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+            class="btn-wa"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Message Us on WhatsApp
+          </a>
+          <a href="tel:+2348159263881" class="btn-sm">📞 Call Us Directly</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="foot-top">
+        <div>
+          <span class="foot-logo">Softlife <em>Solutions</em></span>
+          <p class="foot-about">
+            We simplify everyday living through reliable home services — so you
+            can focus on the life you deserve.
+          </p>
+        </div>
+        <div class="fc">
+          <h5>Services</h5>
+          <ul>
+            <li>
+              <a
+                href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+                target="_blank"
+                >Deep Cleaning</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+                target="_blank"
+                >AC Servicing</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+                target="_blank"
+                >Fumigation</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+                target="_blank"
+                >Painting</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+                target="_blank"
+                >Security</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
+                target="_blank"
+                >Plumbing</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="fc">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#why">About Us</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li>
+              <a href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0" target="_blank">WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+        <div class="fc fcontact">
+          <h5>Contact</h5>
+          <div>
+            📱
+            <a href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0" target="_blank"
+              >WhatsApp Us</a
+            >
+          </div>
+          <div>📞 <a href="tel:+2348159263881">+234 815 926 3881</a></div>
+          <div>
+            📧
+            <a href="mailto:softlifesolutioncompany@gmail.com"
+              >softlifesolutioncompany@gmail.com</a
+            >
+          </div>
+          <div>📍 Lagos, Nigeria</div>
+        </div>
+      </div>
+      <div class="foot-bar">
+        <span>© 2025 Softlife Solutions. All rights reserved.</span>
+        <span>Made for the <em>Soft Life</em> · Lagos, Nigeria</span>
+      </div>
+    </footer>
+
+    <script>
+      const nav = document.getElementById("mainNav");
+      window.addEventListener("scroll", () =>
+        nav.classList.toggle("scrolled", window.scrollY > 50),
+      );
+      function openMob() {
+        document.getElementById("mobOverlay").classList.add("open");
+      }
+      function closeMob() {
+        document.getElementById("mobOverlay").classList.remove("open");
+      }
+      //Mob Overlay
+      function openMob() {
+        document.getElementById("mobOverlay").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closeMob() {
+        document.getElementById("mobOverlay").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      // scroll class on nav
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("mainNav");
+        nav.classList.toggle("scrolled", window.scrollY > 40);
+      });
+
+      // Fade rotator
+      (function () {
+        const items = document.querySelectorAll(".rotator-item");
+        let cur = 0;
+        setInterval(() => {
+          items[cur].classList.remove("active");
+          items[cur].classList.add("leaving");
+          const prev = cur;
+          setTimeout(() => items[prev].classList.remove("leaving"), 500);
+          cur = (cur + 1) % items.length;
+          items[cur].classList.add("active");
+        }, 3200);
+      })();
+
+      // Scroll reveal
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("on");
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
