@@ -6,12 +6,14 @@
   --indigo: #5c61f3;
   --forest: #2b3a04;
   --mid: #7a6555;
+  --grad-hero: linear-gradient(135deg, #0a0a0a 0%, #141414 55%, #1e1e1e 100%);
   --grad-indigo: linear-gradient(135deg, #0d0e2e 0%, #2a2d6b 55%, #5c61f3 100%);
   --grad-forest: linear-gradient(135deg, #1a2402 0%, #2b3a04 55%, #3d5206 100%);
   --grad-cream: linear-gradient(135deg, #3d2e0a 0%, #7a5c1e 55%, #ddd0a8 100%);
   --font-head: "Archivo Black", sans-serif;
   --font-disp: "Playfair Display", Georgia, serif;
   --font-body: "Nunito Sans", system-ui, sans-serif;
+  --font-rotator: "Cormorant Garamond", "Playfair Display", Georgia, serif;
 }
 
 *,
@@ -50,7 +52,7 @@ h4 {
   line-height: 1.1;
 }
 
-/* ── MOB OVERLAY ──────────────────────────── */
+/* ── MOB OVERLAY ── */
 .mob-overlay {
   display: none;
   position: fixed;
@@ -94,7 +96,7 @@ h4 {
   cursor: pointer;
 }
 
-/* ── NAV ──────────────────────────────────── */
+/* ── NAV ── */
 nav {
   position: fixed;
   top: 0;
@@ -110,10 +112,10 @@ nav {
     box-shadow 0.4s ease;
 }
 nav.scrolled {
-  background: rgba(13, 14, 46, 0.97);
+  background: rgba(10, 10, 10, 0.97);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(92, 97, 243, 0.25);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid rgba(235, 218, 179, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.28);
 }
 .nav-inner {
   width: 100%;
@@ -193,9 +195,9 @@ nav.scrolled .nav-btn {
   transition: 0.3s;
 }
 
-/* ── HERO ─────────────────────────────── */
+/* ── HERO ── */
 .hero {
-  background: var(--grad-indigo);
+  background: var(--grad-hero);
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -212,7 +214,7 @@ nav.scrolled .nav-btn {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(235, 218, 179, 0.08) 0%,
+    rgba(199, 81, 112, 0.09) 0%,
     transparent 65%
   );
   pointer-events: none;
@@ -228,7 +230,7 @@ nav.scrolled .nav-btn {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(199, 81, 112, 0.08) 0%,
+    rgba(235, 218, 179, 0.05) 0%,
     transparent 65%
   );
   pointer-events: none;
@@ -250,7 +252,7 @@ nav.scrolled .nav-btn {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(235, 218, 179, 0.45);
+  color: rgba(235, 218, 179, 0.4);
   margin-bottom: 40px;
 }
 .hero-eyebrow::before {
@@ -264,15 +266,15 @@ nav.scrolled .nav-btn {
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 300;
-  color: rgba(235, 218, 179, 0.45);
+  color: rgba(235, 218, 179, 0.4);
   letter-spacing: 0.02em;
   margin-bottom: 6px;
 }
 
-/* rotator */
+/* ── ROTATOR ── */
 .rotator {
   position: relative;
-  height: clamp(48px, 7vw, 96px);
+  height: clamp(52px, 7.5vw, 104px);
   margin-bottom: 36px;
 }
 .rotator-item {
@@ -280,13 +282,17 @@ nav.scrolled .nav-btn {
   inset: 0;
   display: flex;
   align-items: center;
-  font-family: var(--font-head);
-  font-size: clamp(28px, 4.5vw, 80px);
+  font-family: var(--font-rotator);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(30px, 5vw, 86px);
   color: var(--cream);
   white-space: nowrap;
   opacity: 0;
   transform: translateY(10px);
   transition: none;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
 }
 .rotator-item.active {
   animation: fadeIn 0.6s ease forwards;
@@ -295,10 +301,11 @@ nav.scrolled .nav-btn {
   animation: fadeOut 0.5s ease forwards;
 }
 .rotator-item b {
+  font-family: var(--font-rotator);
+  font-style: italic;
+  font-weight: 600;
   color: var(--rose);
-  font-weight: 400;
-  font-style: normal;
-  margin-right: 0.14em;
+  margin-right: 0.12em;
 }
 @keyframes fadeIn {
   from {
@@ -325,7 +332,7 @@ nav.scrolled .nav-btn {
   font-size: 15px;
   line-height: 1.85;
   font-weight: 300;
-  color: rgba(235, 218, 179, 0.5);
+  color: rgba(235, 218, 179, 0.45);
   max-width: 400px;
   margin-bottom: 48px;
 }
@@ -363,8 +370,8 @@ nav.scrolled .nav-btn {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: rgba(235, 218, 179, 0.5);
-  border-bottom: 1px solid rgba(235, 218, 179, 0.2);
+  color: rgba(235, 218, 179, 0.45);
+  border-bottom: 1px solid rgba(235, 218, 179, 0.18);
   padding-bottom: 2px;
   transition: all 0.25s;
   white-space: nowrap;
@@ -376,7 +383,7 @@ nav.scrolled .nav-btn {
 .hero-stats {
   margin-top: 60px;
   padding-top: 32px;
-  border-top: 1px solid rgba(235, 218, 179, 0.1);
+  border-top: 1px solid rgba(235, 218, 179, 0.08);
   display: flex;
   gap: 44px;
 }
@@ -391,11 +398,11 @@ nav.scrolled .nav-btn {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(235, 218, 179, 0.3);
+  color: rgba(235, 218, 179, 0.28);
   margin-top: 4px;
 }
 
-/* ── HERO RIGHT — desktop ── */
+/* ── HERO RIGHT ── */
 .hero-right {
   position: relative;
   display: flex;
@@ -416,18 +423,18 @@ nav.scrolled .nav-btn {
   object-fit: cover;
   object-position: center top;
   opacity: 1;
-  border: 2px solid rgba(235, 218, 179, 0.18);
+  border: 2px solid rgba(235, 218, 179, 0.15);
   box-shadow:
-    0 0 0 12px rgba(92, 97, 243, 0.08),
-    0 32px 80px rgba(20, 10, 40, 0.45);
+    0 0 0 12px rgba(199, 81, 112, 0.06),
+    0 32px 80px rgba(0, 0, 0, 0.55);
   flex-shrink: 0;
 }
 .hchip {
   position: absolute;
   z-index: 3;
-  background: rgba(235, 218, 179, 0.1);
+  background: rgba(235, 218, 179, 0.08);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(235, 218, 179, 0.15);
+  border: 1px solid rgba(235, 218, 179, 0.12);
   padding: 14px 18px;
   border-radius: 10px;
 }
@@ -443,7 +450,7 @@ nav.scrolled .nav-btn {
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(235, 218, 179, 0.4);
+  color: rgba(235, 218, 179, 0.35);
   margin-bottom: 3px;
 }
 .hc-val {
@@ -458,7 +465,7 @@ nav.scrolled .nav-btn {
   letter-spacing: 2px;
 }
 
-/* ── TICKER ─────────────────────────── */
+/* ── TICKER ── */
 .ticker {
   background: var(--rose);
   padding: 13px 0;
@@ -495,7 +502,7 @@ nav.scrolled .nav-btn {
   }
 }
 
-/* ── SECTION SHARED ─────────────────── */
+/* ── SECTIONS ── */
 section {
   padding: 100px 60px;
 }
@@ -551,7 +558,7 @@ h2.stitle.lt em {
   color: rgba(235, 218, 179, 0.45);
 }
 
-/* ── SERVICES ───────────────────────── */
+/* ── SERVICES ── */
 .services {
   background: var(--cream2);
 }
@@ -590,6 +597,9 @@ h2.stitle.lt em {
   position: relative;
 }
 .scard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 .scard:hover .scard-img img {
@@ -651,7 +661,7 @@ h2.stitle.lt em {
   gap: 10px;
 }
 
-/* ── HOW ────────────────────────────── */
+/* ── HOW ── */
 .how {
   background: var(--grad-forest);
   position: relative;
@@ -709,7 +719,7 @@ h2.stitle.lt em {
   font-weight: 300;
 }
 
-/* ── WHY ────────────────────────────── */
+/* ── WHY ── */
 .why {
   background: var(--cream);
   padding: 100px 60px;
@@ -744,6 +754,12 @@ h2.stitle.lt em {
   overflow: hidden;
   border: 5px solid var(--cream);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+.wi-a img,
+.wi-b img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .why-badge {
   position: absolute;
@@ -821,7 +837,7 @@ h2.stitle.lt em {
   font-weight: 300;
 }
 
-/* ── GALLERY ────────────────────────── */
+/* ── GALLERY ── */
 .gallery {
   background: var(--cream2);
   padding: 100px 60px;
@@ -842,6 +858,9 @@ h2.stitle.lt em {
   cursor: pointer;
 }
 .gal-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.55s ease;
 }
 .gal-item:hover img {
@@ -879,7 +898,7 @@ h2.stitle.lt em {
   grid-column: span 2;
 }
 
-/* ── REVIEWS ────────────────────────── */
+/* ── REVIEWS ── */
 .reviews {
   background: var(--grad-indigo);
   position: relative;
@@ -998,7 +1017,7 @@ h2.stitle.lt em {
   margin-top: 6px;
 }
 
-/* ── CTA ────────────────────────────── */
+/* ── CTA ── */
 .cta-wrap {
   background: var(--cream2);
   padding: 60px 60px 100px;
@@ -1096,7 +1115,7 @@ h2.stitle.lt em {
   color: var(--cream);
 }
 
-/* ── FOOTER ─────────────────────────── */
+/* ── FOOTER ── */
 footer {
   background: var(--grad-indigo);
   padding: 70px 60px 32px;
@@ -1169,7 +1188,7 @@ footer {
   font-style: normal;
 }
 
-/* ── FLOAT WA ───────────────────────── */
+/* ── FLOAT WA ── */
 .fwa {
   position: fixed;
   bottom: 26px;
@@ -1211,7 +1230,7 @@ footer {
   }
 }
 
-/* ── REVEAL ─────────────────────────── */
+/* ── REVEAL ── */
 .rv {
   opacity: 0;
   transform: translateY(24px);
@@ -1236,11 +1255,10 @@ footer {
   transform: translateY(0);
 }
 
-/* ════════════════════════════════════════
+/* ════════════════════════════════
    RESPONSIVE
-   ════════════════════════════════════════ */
+   ════════════════════════════════ */
 
-/* ── LARGE LAPTOP (≤ 1280px) ── */
 @media (max-width: 1280px) {
   .hero-left {
     padding: 140px 40px 100px 40px;
@@ -1258,9 +1276,7 @@ footer {
   }
 }
 
-/* ── TABLET LANDSCAPE / SMALL LAPTOP (≤ 1060px) ── */
 @media (max-width: 1060px) {
-  /* NAV */
   nav {
     padding: 0 24px;
   }
@@ -1271,8 +1287,6 @@ footer {
   .ham {
     display: flex;
   }
-
-  /* HERO — single column with faded ghost image behind */
   .hero {
     grid-template-columns: 1fr;
     min-height: 100vh;
@@ -1282,14 +1296,13 @@ footer {
     grid-column: 1;
     grid-row: 1;
   }
-  /* Ghost image sits behind left content, centred, very faded */
   .hero-right {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 0; /* behind hero-left (z-index: 2) */
+    z-index: 0;
     pointer-events: none;
     overflow: hidden;
   }
@@ -1302,17 +1315,15 @@ footer {
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
-    opacity: 0.07; /* very faded ghost */
+    /* More visible ghost — was 0.07, bumped up so you can see it on tablet */
+    opacity: 0.18;
     border: none;
     box-shadow: none;
-    filter: blur(2px);
+    filter: blur(1px);
   }
-  /* hide floating chips on tablet */
   .hchip {
     display: none;
   }
-
-  /* SERVICES */
   .svc-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1321,13 +1332,9 @@ footer {
     gap: 16px;
     margin-bottom: 36px;
   }
-
-  /* HOW */
   .how-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /* WHY */
   .why-wrap {
     grid-template-columns: 1fr;
     gap: 56px;
@@ -1343,8 +1350,6 @@ footer {
     width: 50%;
     height: 190px;
   }
-
-  /* GALLERY */
   .gal-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 220px);
@@ -1355,13 +1360,9 @@ footer {
   .gal-item.wide {
     grid-column: span 2;
   }
-
-  /* REVIEWS */
   .rv-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /* CTA */
   .cta-box {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -1372,8 +1373,6 @@ footer {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-
-  /* FOOTER */
   .foot-top {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
@@ -1384,13 +1383,9 @@ footer {
   nav {
     padding: 0 20px;
   }
-
-  /* HERO */
   .hero-left {
     padding: 85px 28px 60px;
   }
-
-  /* allow rotator to wrap and grow on tablet */
   .rotator {
     height: auto;
     min-height: 52px;
@@ -1399,14 +1394,15 @@ footer {
   }
   .rotator-item {
     white-space: normal;
-    font-size: clamp(22px, 5.5vw, 44px);
+    font-size: clamp(32px, 8vw, 50px);
     line-height: 1.15;
     position: absolute;
     inset: 0;
   }
   .hero-right > img {
     width: 70%;
-    opacity: 0.06;
+    /* Still faded but visible — was 0.06 */
+    opacity: 0.15;
   }
   .hero-stats {
     gap: 24px;
@@ -1416,7 +1412,6 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-
   section {
     padding: 72px 28px;
   }
@@ -1432,21 +1427,15 @@ footer {
   footer {
     padding: 52px 28px 28px;
   }
-
-  /* SERVICES */
   .svc-grid {
     grid-template-columns: 1fr;
   }
-
-  /* HOW */
   .how-grid {
     grid-template-columns: 1fr;
   }
   .hstep {
     padding: 32px 24px;
   }
-
-  /* WHY */
   .why-imgs {
     height: 300px;
   }
@@ -1461,14 +1450,10 @@ footer {
   .why-badge {
     right: 0;
   }
-
-  /* GALLERY */
   .gal-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 180px);
   }
-
-  /* REVIEWS */
   .rv-grid {
     grid-template-columns: 1fr;
   }
@@ -1481,8 +1466,6 @@ footer {
   .sb-i {
     min-width: 50%;
   }
-
-  /* CTA */
   .cta-box {
     padding: 44px 28px;
   }
@@ -1495,8 +1478,6 @@ footer {
     text-align: center;
     justify-content: center;
   }
-
-  /* FOOTER */
   .foot-top {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -1508,13 +1489,10 @@ footer {
   }
 }
 
-/* ── MOBILE (≤ 480px) ── */
 @media (max-width: 480px) {
   .nav-inner {
     padding: 12px 16px;
   }
-
-  /* HERO */
   .hero-left {
     padding: 80px 20px 50px;
   }
@@ -1528,11 +1506,11 @@ footer {
   }
   .rotator {
     height: auto;
-    min-height: 40px;
+    min-height: 50px;
     margin-bottom: 18px;
   }
   .rotator-item {
-    font-size: clamp(20px, 6vw, 30px);
+    font-size: clamp(30px, 10vw, 44px);
     white-space: normal;
     line-height: 1.2;
   }
@@ -1560,9 +1538,9 @@ footer {
   }
   .hero-right > img {
     width: 85%;
-    opacity: 0.05;
+    /* Subtle but visible ghost on small phones — was 0.05 */
+    opacity: 0.12;
   }
-
   section {
     padding: 60px 20px;
   }
@@ -1578,12 +1556,9 @@ footer {
   footer {
     padding: 44px 20px 24px;
   }
-
   h2.stitle {
     font-size: clamp(22px, 6.5vw, 34px);
   }
-
-  /* SERVICES */
   .scard-img {
     height: 170px;
   }
@@ -1593,8 +1568,6 @@ footer {
   .scard-desc {
     font-size: 13px;
   }
-
-  /* HOW */
   .hstep-no {
     font-size: 40px;
   }
@@ -1604,8 +1577,6 @@ footer {
   .hstep-body {
     font-size: 13px;
   }
-
-  /* WHY */
   .why-imgs {
     height: 260px;
   }
@@ -1629,8 +1600,6 @@ footer {
   .wi-dsc {
     font-size: 12px;
   }
-
-  /* GALLERY */
   .gal-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -1643,8 +1612,6 @@ footer {
     grid-row: span 1;
     grid-column: span 1;
   }
-
-  /* REVIEWS */
   .rv-card {
     padding: 24px 18px;
   }
@@ -1664,8 +1631,6 @@ footer {
     padding: 24px 14px;
     min-width: 50%;
   }
-
-  /* CTA */
   .cta-box {
     padding: 36px 20px;
   }
@@ -1675,8 +1640,6 @@ footer {
   .cta-sub {
     font-size: 13px;
   }
-
-  /* FOOTER */
   .foot-top {
     gap: 28px;
   }
