@@ -474,7 +474,7 @@ nav.scrolled .nav-btn {
 }
 .ticker-inner {
   display: inline-flex;
-  animation: tk 22s linear infinite;
+  animation: tk 30s linear infinite;
 }
 .tick {
   display: inline-flex;
@@ -590,9 +590,15 @@ h2.stitle.lt em {
   transform: translateY(-6px);
   box-shadow: 0 20px 56px rgba(44, 24, 16, 0.12);
 }
+
+/* ── SERVICE CARD IMAGE ──
+   KEY FIX: height bumped to 260px (was 200px) so portrait photos
+   show significantly more of the person + context.
+   object-fit: cover + object-position on each card in HTML
+   ensures the most important part of the photo is framed. */
 .scard-img {
   width: 100%;
-  height: 200px;
+  height: 260px; /* ↑ was 200px */
   overflow: hidden;
   position: relative;
 }
@@ -837,65 +843,195 @@ h2.stitle.lt em {
   font-weight: 300;
 }
 
-/* ── GALLERY ── */
-.gallery {
-  background: var(--cream2);
+/* ════════════════════════════════════
+   ── ARTISAN SECTION ──
+   ════════════════════════════════════ */
+.artisan {
+  background: var(--grad-hero);
   padding: 100px 60px;
-}
-.gallery-head {
-  margin-bottom: 52px;
-}
-.gal-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 240px 240px;
-  gap: 12px;
-}
-.gal-item {
-  border-radius: 10px;
-  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  overflow: hidden;
 }
-.gal-item img {
+.artisan::before {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(199, 81, 112, 0.1) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+.artisan::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(235, 218, 179, 0.06) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+.artisan .tag {
+  color: rgba(235, 218, 179, 0.45);
+}
+.artisan .tag::after {
+  background: rgba(235, 218, 179, 0.3);
+}
+.artisan h2.stitle {
+  color: var(--cream);
+}
+.artisan h2.stitle em {
+  color: var(--rose);
+}
+.artisan .bodytxt {
+  color: rgba(235, 218, 179, 0.5);
+}
+.artisan-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.artisan-perks {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.artisan-perk {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(235, 218, 179, 0.08);
+  transition: padding-left 0.25s;
+}
+.artisan-perk:first-child {
+  border-top: 1px solid rgba(235, 218, 179, 0.08);
+}
+.artisan-perk:hover {
+  padding-left: 8px;
+}
+.ap-ico {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(199, 81, 112, 0.15);
+  border: 1px solid rgba(199, 81, 112, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ap-ttl {
+  font-family: var(--font-head);
+  font-size: 14px;
+  color: var(--cream);
+  margin-bottom: 3px;
+}
+.ap-dsc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(235, 218, 179, 0.4);
+  font-weight: 300;
+}
+.artisan-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  background: var(--rose);
+  color: #fff;
+  padding: 15px 32px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+  box-shadow: 0 8px 28px rgba(199, 81, 112, 0.35);
+  width: fit-content;
+}
+.artisan-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(199, 81, 112, 0.5);
+}
+
+/* ── Artisan photo cards (desktop) ── */
+.artisan-imgs {
+  position: relative;
+  height: 560px;
+} /* ↑ was 520px */
+.ai-card {
+  position: absolute;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(235, 218, 179, 0.1);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.ai-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.6);
+}
+.ai-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.55s ease;
+  display: block;
 }
-.gal-item:hover img {
-  transform: scale(1.07);
-}
-.gal-overlay {
+/* Top card: taller to show more of portrait */
+.ai-top {
+  top: 0;
+  left: 0;
+  width: 62%;
+  height: 330px;
+} /* ↑ was 300px */
+/* Mid card: taller */
+.ai-mid {
+  top: 90px;
+  right: 0;
+  width: 48%;
+  height: 250px;
+  z-index: 2;
+} /* ↑ was 220px */
+/* Bot card: taller */
+.ai-bot {
+  bottom: 0;
+  left: 10%;
+  width: 70%;
+  height: 220px;
+  z-index: 1;
+} /* ↑ was 200px */
+.ai-badge {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(26, 18, 8, 0.7) 0%, transparent 55%);
-  opacity: 0;
-  transition: opacity 0.35s;
-}
-.gal-item:hover .gal-overlay {
-  opacity: 1;
-}
-.gal-label {
-  position: absolute;
-  bottom: 16px;
-  left: 18px;
+  bottom: 12px;
+  left: 14px;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(235, 218, 179, 0.15);
+  color: var(--cream);
   font-family: var(--font-head);
-  font-size: 13px;
-  color: #fff;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: all 0.35s;
-}
-.gal-item:hover .gal-label {
-  opacity: 1;
-  transform: translateY(0);
-}
-.gal-item.tall {
-  grid-row: span 2;
-}
-.gal-item.wide {
-  grid-column: span 2;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  border-radius: 100px;
 }
 
 /* ── REVIEWS ── */
@@ -1255,9 +1391,10 @@ footer {
   transform: translateY(0);
 }
 
-/* ════════════════════════════════
+/* ════════════════════════════════════════
    RESPONSIVE
-   ════════════════════════════════ */
+   All image-height overrides marked ↑FIX
+   ════════════════════════════════════════ */
 
 @media (max-width: 1280px) {
   .hero-left {
@@ -1273,6 +1410,12 @@ footer {
   .foot-top {
     grid-template-columns: 1.4fr 1fr 1fr 1fr;
     gap: 32px;
+  }
+  .artisan-inner {
+    gap: 56px;
+  }
+  .artisan-imgs {
+    height: 500px;
   }
 }
 
@@ -1315,7 +1458,6 @@ footer {
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
-    /* More visible ghost — was 0.07, bumped up so you can see it on tablet */
     opacity: 0.18;
     border: none;
     box-shadow: none;
@@ -1332,6 +1474,10 @@ footer {
     gap: 16px;
     margin-bottom: 36px;
   }
+  /* ↑FIX: keep card images tall on tablet so portrait photos show fully */
+  .scard-img {
+    height: 240px;
+  }
   .how-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1340,26 +1486,39 @@ footer {
     gap: 56px;
   }
   .why-imgs {
-    height: 340px;
-  }
+    height: 380px;
+  } /* ↑FIX was 340px */
   .wi-a {
     width: 80%;
-    height: 300px;
-  }
+    height: 340px;
+  } /* ↑FIX was 300px */
   .wi-b {
     width: 50%;
-    height: 190px;
+    height: 220px;
+  } /* ↑FIX was 190px */
+  .artisan-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
-  .gal-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 220px);
+  /* ↑FIX: artisan photos section taller on tablet */
+  .artisan-imgs {
+    height: 420px;
+    order: -1;
   }
-  .gal-item.tall {
-    grid-row: span 1;
-  }
-  .gal-item.wide {
-    grid-column: span 2;
-  }
+  .ai-top {
+    width: 58%;
+    height: 290px;
+  } /* ↑FIX was 240px */
+  .ai-mid {
+    width: 46%;
+    height: 220px;
+    top: 70px;
+  } /* ↑FIX was 180px */
+  .ai-bot {
+    width: 65%;
+    height: 200px;
+    left: 8%;
+  } /* ↑FIX was 160px */
   .rv-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1401,7 +1560,6 @@ footer {
   }
   .hero-right > img {
     width: 70%;
-    /* Still faded but visible — was 0.06 */
     opacity: 0.15;
   }
   .hero-stats {
@@ -1418,7 +1576,7 @@ footer {
   .why {
     padding: 72px 28px;
   }
-  .gallery {
+  .artisan {
     padding: 72px 28px;
   }
   .cta-wrap {
@@ -1427,32 +1585,54 @@ footer {
   footer {
     padding: 52px 28px 28px;
   }
+  /* ↑FIX: 2-column grid on mobile landscape, keep tall images */
   .svc-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
+  .scard-img {
+    height: 230px;
+  } /* ↑FIX was ~200px */
   .how-grid {
     grid-template-columns: 1fr;
   }
   .hstep {
     padding: 32px 24px;
   }
+  /* ↑FIX: Why section image stacks — make both images taller */
   .why-imgs {
-    height: 300px;
+    height: 360px;
   }
   .wi-a {
     width: 85%;
-    height: 260px;
-  }
+    height: 300px;
+  } /* ↑FIX was 260px */
   .wi-b {
     width: 55%;
-    height: 160px;
-  }
+    height: 190px;
+  } /* ↑FIX was 160px */
   .why-badge {
     right: 0;
   }
-  .gal-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 180px);
+  /* ↑FIX: Artisan cards taller on mobile */
+  .artisan-imgs {
+    height: 360px;
+  }
+  .ai-top {
+    width: 60%;
+    height: 260px;
+  } /* ↑FIX was 200px */
+  .ai-mid {
+    width: 48%;
+    height: 200px;
+    top: 60px;
+  } /* ↑FIX was 160px */
+  .ai-bot {
+    width: 68%;
+    height: 180px;
+  } /* ↑FIX was 140px */
+  .artisan-cta {
+    width: 100%;
+    justify-content: center;
   }
   .rv-grid {
     grid-template-columns: 1fr;
@@ -1538,7 +1718,6 @@ footer {
   }
   .hero-right > img {
     width: 85%;
-    /* Subtle but visible ghost on small phones — was 0.05 */
     opacity: 0.12;
   }
   section {
@@ -1547,7 +1726,7 @@ footer {
   .why {
     padding: 60px 20px;
   }
-  .gallery {
+  .artisan {
     padding: 60px 20px;
   }
   .cta-wrap {
@@ -1559,9 +1738,13 @@ footer {
   h2.stitle {
     font-size: clamp(22px, 6.5vw, 34px);
   }
-  .scard-img {
-    height: 170px;
+  /* ↑FIX: 1-column on small phones, generous image height */
+  .svc-grid {
+    grid-template-columns: 1fr;
   }
+  .scard-img {
+    height: 240px;
+  } /* ↑FIX was 170px — biggest change for small phones */
   .scard-name {
     font-size: 15px;
   }
@@ -1577,17 +1760,18 @@ footer {
   .hstep-body {
     font-size: 13px;
   }
+  /* ↑FIX: Why section images on small phones */
   .why-imgs {
-    height: 260px;
+    height: 320px;
   }
   .wi-a {
     width: 88%;
-    height: 220px;
-  }
+    height: 270px;
+  } /* ↑FIX was 220px */
   .wi-b {
     width: 58%;
-    height: 140px;
-  }
+    height: 170px;
+  } /* ↑FIX was 140px */
   .wb-n {
     font-size: 28px;
   }
@@ -1600,17 +1784,32 @@ footer {
   .wi-dsc {
     font-size: 12px;
   }
-  .gal-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  /* ↑FIX: Artisan cards on small phones — biggest improvement */
+  .artisan-imgs {
+    height: 320px;
   }
-  .gal-item {
-    height: 200px;
+  .ai-top {
+    width: 62%;
+    height: 220px;
+  } /* ↑FIX was 170px */
+  .ai-mid {
+    width: 50%;
+    height: 180px;
+    top: 50px;
+  } /* ↑FIX was 140px */
+  .ai-bot {
+    width: 70%;
+    height: 155px;
+  } /* ↑FIX was 120px */
+  .ap-ttl {
+    font-size: 13px;
   }
-  .gal-item.tall,
-  .gal-item.wide {
-    grid-row: span 1;
-    grid-column: span 1;
+  .ap-dsc {
+    font-size: 12px;
+  }
+  .artisan-cta {
+    font-size: 12px;
+    padding: 13px 24px;
   }
   .rv-card {
     padding: 24px 18px;
