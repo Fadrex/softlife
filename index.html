@@ -8,9 +8,17 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital@0;1&family=Nunito+Sans:wght@300;400;600&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,600&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- CURSOR GLOW -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <a
       href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
       class="fwa"
@@ -99,15 +107,15 @@
         </div>
         <div class="hero-stats">
           <div>
-            <div class="stn">500+</div>
+            <div class="stn" data-count="500" data-suffix="+">0</div>
             <div class="stl">Jobs Done</div>
           </div>
           <div>
-            <div class="stn">4.9★</div>
+            <div class="stn" data-count-star="4.9">0</div>
             <div class="stl">Rating</div>
           </div>
           <div>
-            <div class="stn">98%</div>
+            <div class="stn" data-count="98" data-suffix="%">0</div>
             <div class="stl">Satisfied</div>
           </div>
         </div>
@@ -159,22 +167,36 @@
     <section class="services" id="services">
       <div class="svc-head">
         <div>
-          <p class="tag rv">Our Services</p>
-          <h2 class="stitle rv d1">
+          <p class="tag" data-aos="fade-right" data-aos-duration="600">
+            Our Services
+          </p>
+          <h2
+            class="stitle"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-delay="100"
+          >
             Everything your home<br />needs, <em>handled.</em>
           </h2>
         </div>
-        <p class="bodytxt rv d2">
+        <p
+          class="bodytxt"
+          data-aos="fade-left"
+          data-aos-duration="700"
+          data-aos-delay="200"
+        >
           Vetted professionals, fair pricing, guaranteed results. Book any
           service instantly on WhatsApp.
         </p>
       </div>
       <div class="svc-grid">
-        <!-- 1. Deep Cleaning — artisan cleaning shower head, vest visible in lower half -->
         <a
-          class="scard rv"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="0"
         >
           <div class="scard-img">
             <img
@@ -196,11 +218,13 @@
           </div>
         </a>
 
-        <!-- 2. AC Servicing — two techs arms up at AC unit overhead -->
         <a
-          class="scard rv d1"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="80"
         >
           <div class="scard-img">
             <img
@@ -221,11 +245,13 @@
           </div>
         </a>
 
-        <!-- 3. Pest Control — full body shot with fogging machine, show machine + person -->
         <a
-          class="scard rv d2"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="160"
         >
           <div class="scard-img">
             <img
@@ -246,11 +272,13 @@
           </div>
         </a>
 
-        <!-- 4. Painting — artisan facing bare walls, show vest + room context -->
         <a
-          class="scard rv"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="0"
         >
           <div class="scard-img">
             <img
@@ -271,11 +299,13 @@
           </div>
         </a>
 
-        <!-- 5. Security — artisan at wall panel, arms up, show head + hands + panel -->
         <a
-          class="scard rv d1"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="80"
         >
           <div class="scard-img">
             <img
@@ -296,11 +326,13 @@
           </div>
         </a>
 
-        <!-- 6. Plumbing — person bent low, show upper body + work area -->
         <a
-          class="scard rv d2"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="160"
         >
           <div class="scard-img">
             <img
@@ -321,11 +353,13 @@
           </div>
         </a>
 
-        <!-- 7. Painter — artisan with tape measure in LED room, show full body action -->
         <a
-          class="scard rv"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="0"
         >
           <div class="scard-img">
             <img
@@ -345,11 +379,13 @@
           </div>
         </a>
 
-        <!-- 8. Furniture — landscape stock photo, works well at any crop -->
         <a
-          class="scard rv d1"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="80"
         >
           <div class="scard-img">
             <img
@@ -370,11 +406,13 @@
           </div>
         </a>
 
-        <!-- 9. Other Services — two artisans on roof with solar panel, wide shot -->
         <a
-          class="scard rv d2"
+          class="scard"
           href="https://api.whatsapp.com/message/UMRYCZRSISBMK1?autoload=1&app_absent=0"
           target="_blank"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="160"
         >
           <div class="scard-img">
             <img
@@ -402,10 +440,24 @@
 
     <!-- HOW IT WORKS -->
     <section class="how" id="how">
-      <p class="tag lt rv">The Process</p>
-      <h2 class="stitle lt rv d1">Simple as sending <em>a message.</em></h2>
+      <p class="tag lt" data-aos="fade-up" data-aos-duration="500">
+        The Process
+      </p>
+      <h2
+        class="stitle lt"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="100"
+      >
+        Simple as sending <em>a message.</em>
+      </h2>
       <div class="how-grid">
-        <div class="hstep rv">
+        <div
+          class="hstep"
+          data-aos="flip-left"
+          data-aos-duration="700"
+          data-aos-delay="0"
+        >
           <span class="hstep-no">01</span>
           <div class="hstep-title">Message Us</div>
           <p class="hstep-body">
@@ -413,7 +465,12 @@
             works for you.
           </p>
         </div>
-        <div class="hstep rv d1">
+        <div
+          class="hstep"
+          data-aos="flip-left"
+          data-aos-duration="700"
+          data-aos-delay="120"
+        >
           <span class="hstep-no">02</span>
           <div class="hstep-title">Get a Quote</div>
           <p class="hstep-body">
@@ -421,7 +478,12 @@
             we start.
           </p>
         </div>
-        <div class="hstep rv d2">
+        <div
+          class="hstep"
+          data-aos="flip-left"
+          data-aos-duration="700"
+          data-aos-delay="240"
+        >
           <span class="hstep-no">03</span>
           <div class="hstep-title">We Show Up</div>
           <p class="hstep-body">
@@ -429,7 +491,12 @@
             deliver.
           </p>
         </div>
-        <div class="hstep rv d3">
+        <div
+          class="hstep"
+          data-aos="flip-left"
+          data-aos-duration="700"
+          data-aos-delay="360"
+        >
           <span class="hstep-no">04</span>
           <div class="hstep-title">You Relax</div>
           <p class="hstep-body">
@@ -443,7 +510,7 @@
     <!-- WHY US -->
     <section class="why" id="why">
       <div class="why-wrap">
-        <div class="why-imgs rv">
+        <div class="why-imgs" data-aos="fade-right" data-aos-duration="800">
           <div class="wi-a">
             <img
               src="./photo_1_2026-03-12_18-54-55.jpg"
@@ -459,21 +526,40 @@
             />
           </div>
           <div class="why-badge">
-            <span class="wb-n">500+</span>
+            <span class="wb-n counter-badge" data-count="500" data-suffix="+"
+              >0+</span
+            >
             <div class="wb-l">Jobs Done</div>
           </div>
         </div>
         <div>
-          <p class="tag rv">Why Choose Us</p>
-          <h2 class="stitle rv d1">
+          <p class="tag" data-aos="fade-left" data-aos-duration="500">
+            Why Choose Us
+          </p>
+          <h2
+            class="stitle"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-delay="100"
+          >
             We don't just clean.<br /><em>We elevate.</em>
           </h2>
-          <p class="bodytxt rv d2">
+          <p
+            class="bodytxt"
+            data-aos="fade-left"
+            data-aos-duration="700"
+            data-aos-delay="200"
+          >
             Every professional we send is vetted, trained, and committed to
             making your home feel the way it should.
           </p>
           <div class="why-list">
-            <div class="wi-row rv d1">
+            <div
+              class="wi-row"
+              data-aos="fade-left"
+              data-aos-duration="600"
+              data-aos-delay="100"
+            >
               <div class="wi-ico">🔒</div>
               <div>
                 <div class="wi-ttl">Vetted Professionals Only</div>
@@ -483,7 +569,12 @@
                 </p>
               </div>
             </div>
-            <div class="wi-row rv d2">
+            <div
+              class="wi-row"
+              data-aos="fade-left"
+              data-aos-duration="600"
+              data-aos-delay="180"
+            >
               <div class="wi-ico">⚡</div>
               <div>
                 <div class="wi-ttl">Same-Day Availability</div>
@@ -492,7 +583,12 @@
                 </p>
               </div>
             </div>
-            <div class="wi-row rv d3">
+            <div
+              class="wi-row"
+              data-aos="fade-left"
+              data-aos-duration="600"
+              data-aos-delay="260"
+            >
               <div class="wi-ico">💯</div>
               <div>
                 <div class="wi-ttl">Satisfaction Guaranteed</div>
@@ -502,7 +598,12 @@
                 </p>
               </div>
             </div>
-            <div class="wi-row rv d4">
+            <div
+              class="wi-row"
+              data-aos="fade-left"
+              data-aos-duration="600"
+              data-aos-delay="340"
+            >
               <div class="wi-ico">💳</div>
               <div>
                 <div class="wi-ttl">Transparent Pricing</div>
@@ -521,15 +622,35 @@
     <section class="artisan" id="artisan">
       <div class="artisan-inner">
         <div class="artisan-text">
-          <p class="tag rv">Join Our Team</p>
-          <h2 class="stitle rv d1">Want to become<br />an <em>Artisan?</em></h2>
-          <p class="bodytxt rv d2" style="max-width: 460px">
+          <p class="tag" data-aos="fade-right" data-aos-duration="500">
+            Join Our Team
+          </p>
+          <h2
+            class="stitle"
+            data-aos="fade-right"
+            data-aos-duration="600"
+            data-aos-delay="100"
+          >
+            Want to become<br />an <em>Artisan?</em>
+          </h2>
+          <p
+            class="bodytxt"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-delay="200"
+            style="max-width: 460px"
+          >
             We're always looking for skilled, reliable professionals to join the
             Softlife family. Earn more, work smarter, and serve Lagos's best
             homes — on your own schedule.
           </p>
           <div class="artisan-perks">
-            <div class="artisan-perk rv d1">
+            <div
+              class="artisan-perk"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="100"
+            >
               <div class="ap-ico">💰</div>
               <div>
                 <div class="ap-ttl">Competitive Pay</div>
@@ -538,7 +659,12 @@
                 </p>
               </div>
             </div>
-            <div class="artisan-perk rv d2">
+            <div
+              class="artisan-perk"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="200"
+            >
               <div class="ap-ico">📅</div>
               <div>
                 <div class="ap-ttl">Flexible Schedule</div>
@@ -548,7 +674,12 @@
                 </p>
               </div>
             </div>
-            <div class="artisan-perk rv d3">
+            <div
+              class="artisan-perk"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="300"
+            >
               <div class="ap-ico">🚀</div>
               <div>
                 <div class="ap-ttl">Steady Job Flow</div>
@@ -560,13 +691,20 @@
           </div>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSco4sdt-skOsJqstHnmoLdZ9In9mZWoP7WSgV8-oH4nlKke-Q/viewform?usp=header"
-            class="artisan-cta rv d3"
+            class="artisan-cta"
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay="400"
             target="_blank"
             >Apply Here</a
           >
         </div>
-        <div class="artisan-imgs rv d1">
-          <!-- AC team — show vest + AC unit, zoom to top of photo -->
+        <div
+          class="artisan-imgs"
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-delay="200"
+        >
           <div class="ai-card ai-top">
             <img
               src="./photo_6_2026-03-12_18-54-55.jpg"
@@ -575,7 +713,6 @@
             />
             <div class="ai-badge">AC Specialist</div>
           </div>
-          <!-- Cleaning team — show vest text + action, top of photo -->
           <div class="ai-card ai-mid">
             <img
               src="./photo_5_2026-03-12_18-54-55.jpg"
@@ -584,7 +721,6 @@
             />
             <div class="ai-badge">Deep Cleaning Pro</div>
           </div>
-          <!-- Security/plumbing team — show upper body + work, top of photo -->
           <div class="ai-card ai-bot">
             <img
               src="./photo_3_2026-03-12_18-54-55.jpg"
@@ -601,15 +737,35 @@
     <section class="reviews" id="reviews">
       <div class="rv-head">
         <div>
-          <p class="tag lt rv">Reviews</p>
-          <h2 class="stitle lt rv d1">Hear it from <em>our customers.</em></h2>
+          <p class="tag lt" data-aos="fade-up" data-aos-duration="500">
+            Reviews
+          </p>
+          <h2
+            class="stitle lt"
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay="100"
+          >
+            Hear it from <em>our customers.</em>
+          </h2>
         </div>
-        <p class="bodytxt lt rv d2" style="max-width: 300px">
+        <p
+          class="bodytxt lt"
+          data-aos="fade-up"
+          data-aos-duration="700"
+          data-aos-delay="200"
+          style="max-width: 300px"
+        >
           Hundreds of happy homes across Lagos. Real people, real results.
         </p>
       </div>
       <div class="rv-grid">
-        <div class="rv-card rv">
+        <div
+          class="rv-card"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="0"
+        >
           <div class="rv-stars">★★★★★</div>
           <p class="rv-quote">
             "They showed up on time, cleaned every corner, and left the place
@@ -623,7 +779,12 @@
             </div>
           </div>
         </div>
-        <div class="rv-card rv d1">
+        <div
+          class="rv-card"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="100"
+        >
           <div class="rv-stars">★★★★★</div>
           <p class="rv-quote">
             "The AC team was fast, professional, explained everything. Best
@@ -637,7 +798,12 @@
             </div>
           </div>
         </div>
-        <div class="rv-card rv d2">
+        <div
+          class="rv-card"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="200"
+        >
           <div class="rv-stars">★★★★★</div>
           <p class="rv-quote">
             "Pest control done safely, completely fine for my kids. Pricing was
@@ -651,7 +817,12 @@
             </div>
           </div>
         </div>
-        <div class="rv-card rv">
+        <div
+          class="rv-card"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="0"
+        >
           <div class="rv-stars">★★★★★</div>
           <p class="rv-quote">
             "House repainted perfectly. They cleaned up after themselves. Zero
@@ -665,7 +836,12 @@
             </div>
           </div>
         </div>
-        <div class="rv-card rv d1">
+        <div
+          class="rv-card"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="100"
+        >
           <div class="rv-stars">★★★★★</div>
           <p class="rv-quote">
             "CCTV installed perfectly, walked me through the app. Very
@@ -679,7 +855,12 @@
             </div>
           </div>
         </div>
-        <div class="rv-card rv d2">
+        <div
+          class="rv-card"
+          data-aos="zoom-in"
+          data-aos-duration="600"
+          data-aos-delay="200"
+        >
           <div class="rv-stars">★★★★★</div>
           <p class="rv-quote">
             "WhatsApp booking, quote in minutes, team at my door next morning.
@@ -694,21 +875,26 @@
           </div>
         </div>
       </div>
-      <div class="stats-bar rv">
+      <div
+        class="stats-bar"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-delay="200"
+      >
         <div class="sb-i">
-          <span class="sb-n">500+</span>
+          <span class="sb-n" data-count="500" data-suffix="+">0</span>
           <div class="sb-l">Jobs Done</div>
         </div>
         <div class="sb-i">
-          <span class="sb-n">4.9★</span>
+          <span class="sb-n" data-count-star="4.9">0</span>
           <div class="sb-l">Avg Rating</div>
         </div>
         <div class="sb-i">
-          <span class="sb-n">9+</span>
+          <span class="sb-n" data-count="9" data-suffix="+">0</span>
           <div class="sb-l">Services</div>
         </div>
         <div class="sb-i">
-          <span class="sb-n">98%</span>
+          <span class="sb-n" data-count="98" data-suffix="%">0</span>
           <div class="sb-l">Satisfied</div>
         </div>
       </div>
@@ -716,7 +902,7 @@
 
     <!-- CTA -->
     <div class="cta-wrap">
-      <div class="cta-box rv">
+      <div class="cta-box" data-aos="zoom-in-up" data-aos-duration="800">
         <div style="position: relative; z-index: 1">
           <p class="cta-pre">Ready to book?</p>
           <h2 class="cta-ttl">
@@ -865,7 +1051,18 @@
       </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script>
+      /* ── AOS init ── */
+      AOS.init({
+        once: true,
+        offset: 80,
+        easing: "ease-out-cubic",
+      });
+
+      /* ── Mobile overlay ── */
       function openMob() {
         document.getElementById("mobOverlay").classList.add("open");
         document.body.style.overflow = "hidden";
@@ -874,11 +1071,15 @@
         document.getElementById("mobOverlay").classList.remove("open");
         document.body.style.overflow = "";
       }
+
+      /* ── Scrolled nav ── */
       window.addEventListener("scroll", function () {
         document
           .getElementById("mainNav")
           .classList.toggle("scrolled", window.scrollY > 40);
       });
+
+      /* ── Rotator ── */
       (function () {
         const items = document.querySelectorAll(".rotator-item");
         let cur = 0;
@@ -891,15 +1092,110 @@
           items[cur].classList.add("active");
         }, 3200);
       })();
-      const io = new IntersectionObserver(
+
+      /* ── Animated counters ── */
+      function animateCounter(el) {
+        if (el.dataset.counted) return;
+        el.dataset.counted = "1";
+
+        if (el.dataset.countStar !== undefined) {
+          const target = parseFloat(el.dataset.countStar);
+          const duration = 1800;
+          const start = performance.now();
+          function tick(now) {
+            const p = Math.min((now - start) / duration, 1);
+            const ease = 1 - Math.pow(1 - p, 3);
+            el.textContent = (ease * target).toFixed(1) + "★";
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          return;
+        }
+
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || "";
+        const duration = 1600;
+        const start = performance.now();
+        function tick(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(ease * target) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      /* Trigger counters when they scroll into view */
+      const counterObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
-            if (e.isIntersecting) e.target.classList.add("on");
+            if (e.isIntersecting) animateCounter(e.target);
           });
         },
-        { threshold: 0.08 },
+        { threshold: 0.3 },
       );
-      document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+
+      document
+        .querySelectorAll("[data-count], [data-count-star]")
+        .forEach((el) => {
+          counterObserver.observe(el);
+        });
+
+      /* ── Cursor glow (desktop only) ── */
+      const glow = document.getElementById("cursorGlow");
+      let mx = -300,
+        my = -300;
+      let cx = -300,
+        cy = -300;
+      const darkSections = ["home", "how", "artisan", "reviews"];
+
+      function isInDarkSection(x, y) {
+        for (const id of darkSections) {
+          const el = document.getElementById(id);
+          if (!el) continue;
+          const r = el.getBoundingClientRect();
+          if (y >= r.top && y <= r.bottom) return true;
+        }
+        return false;
+      }
+
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        glow.style.opacity = isInDarkSection(mx, my) ? "1" : "0";
+      });
+
+      function glowLoop() {
+        cx += (mx - cx) * 0.1;
+        cy += (my - cy) * 0.1;
+        glow.style.transform = `translate(${cx - 180}px, ${cy - 180}px)`;
+        requestAnimationFrame(glowLoop);
+      }
+      glowLoop();
+
+      /* ── Service card tilt on hover (desktop) ── */
+      if (window.matchMedia("(hover: hover)").matches) {
+        document.querySelectorAll(".scard").forEach((card) => {
+          card.addEventListener("mousemove", (e) => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transform = `translateY(-6px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg)`;
+          });
+          card.addEventListener("mouseleave", () => {
+            card.style.transform = "";
+          });
+        });
+      }
+
+      /* ── Ticker pause on hover ── */
+      const tickerInner = document.querySelector(".ticker-inner");
+      document.querySelector(".ticker").addEventListener("mouseenter", () => {
+        tickerInner.style.animationPlayState = "paused";
+      });
+      document.querySelector(".ticker").addEventListener("mouseleave", () => {
+        tickerInner.style.animationPlayState = "running";
+      });
     </script>
   </body>
 </html>
